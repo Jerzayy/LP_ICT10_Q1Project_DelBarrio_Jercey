@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>Uno Brew - Menu</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        body {
+            background-color: #ffc7a3;
+        }
+
+        .container {
+            background-color: #ffdc96;
+            padding: 20px;
+            border: 3px solid rgb(159, 86, 47);
+            border-radius: 15px;
+        }
+
+        .table tbody td {
+            background-color: white;
+            border: 2px solid rgb(174, 109, 63);
+        }
+
+        #heading1 {
+            background-color: #fff1c0;
+            border: 2px solid rgb(174, 109, 63);
+        }
+
+        .header-box {
+            background-color: #fff1c0;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background-color: rgb(188, 114, 68);
+            border-color: rgb(159, 86, 47);
+        }
+
+        .btn-color:hover {
+            background-color: rgb(236, 166, 87);
+        }
+    
+        .navbar {
+            background-color: rgb(188, 114, 68);
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #000000;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .btn-color{
+            background-color: rgb(188, 114, 68);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .back-btn{
+            background-color: rgb(188, 114, 68);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .custom-text {
+            color: rgb(110, 62, 33);
+        }
+        .box{
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            border: 3px solid rgb(188, 114, 68);
+        }
+        .grid-container {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+        }
+        .price-tag{
+            color: red; 
+            font-weight: bold;
+        }
+        .cont-2{
+            margin-top: 150px;
+        }
+        .form-control{
+            background-color: rgb(255, 213, 147);
+        }
+        .opening-hours{
+            background-color: rgb(239, 178, 134);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="brown-theme">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-drumstick-bite me-2"></i>Dun Dun's shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ordering_form.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <br>
+    <br>
+
+    <div class="container py-5">
+        <div class="order-container p-4 mb-4">
+            <h1 class=" custom-text mb-4 text-center">Food Ordering System</h1>
+            
+            <div class="row box">
+                <div class="col-md-6">
+                    <h3 class="custom-text mb-3">Menu:</h3>
+                    
+                    <div class="grid-container form-check menu-item">
+                        <img src="https://www.foxyfolksy.com/wp-content/uploads/2021/05/homemade-fish-balls.jpg" class="food-img" alt="Carbonara">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item1" value=79.99>
+                            <label class="form-check-label" for="item1">Fish ball</label>
+                            <div class="price-tag">₱120.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-container form-check menu-item">
+                        <img src="https://www.kawalingpinoy.com/wp-content/uploads/2019/07/kwek-kwek-14.jpg" class="food-img" alt="Garlic Bread">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item2" value=50>
+                            <label class="form-check-label" for="item2">Kwek Kwek</label>
+                            <div class="price-tag">₱200.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-container form-check menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbgfGl6QOTJULQ3bUbmo2ZAtUah6dZ4iS8KQ&s" class="food-img" alt="Caesar Salad">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item3" value=150>
+                            <label class="form-check-label" for="item3">Kikiam</label>
+                            <div class="price-tag">₱99.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-container form-check menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6-dU22QzAHwhkhSCZvI8c6WVHOyYaYdx9tA&s" class="food-img" alt="Iced Tea">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item4" value=30>
+                            <label class="form-check-label" for="item4">Turon</label>
+                            <div class="price-tag">₱80.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-container form-check menu-item">
+                        <img src="https://i.pinimg.com/736x/f5/7b/9c/f57b9c002ba6c57f8267b5f747efabfd.jpg" class="food-img" alt="Sparkling Water">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item5" value=20>
+                            <label class="form-check-label" for="item5">Buko juice</label>
+                            <div class="price-tag">₱20.50</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cont-2 col-md-6">
+                    <h3 class="custom-text mb-3">Customer Details:</h3>
+                    <div class="mb-3">
+                        <label for="customer" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="customer" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact_number" class="form-label">Contact Number</label>
+                        <input type="text" class="form-control" id="contact_number" placeholder="Enter your contact number">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-grid gap-2 col-md-6 mx-auto mt-4">
+                <button class="btn btn-color btn-lg" type="submit" py-click="create_order">Create Order</button>
+            </div>
+        </div>
+        
+        <div class="order-container p-4">
+            <h3 class="custom-text mb-3">Order Summary:</h3>
+            <div id="order_output1" class="mb-2"></div>
+            <div id="order_output2" class="mb-2"></div>
+            <div id="order_output3" class="mb-2"></div>
+            <div id="show" class="h4 mt-3"></div>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+
+    <center>
+        <a href="index.html">
+            <button class="back-btn">
+                <i class="fas fa-arrow-left me-2"></i>Back to Home
+            </button>
+        </a>
+    </center>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="py" src="main2.py"></script>
+</body>
+</html>
